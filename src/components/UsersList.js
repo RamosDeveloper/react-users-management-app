@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 
 import Loading from './Loading';
 
-const UsersList = ({users, setCurrentUser, fetchAndSetUsers}) => {
+const UsersList = ({users, setUser, fetchAndSetUsers}) => {
     if(users.length === 0) return <Loading />
 
     const deleteUserAlert = (userToBeDelete) => {
@@ -63,7 +63,7 @@ const UsersList = ({users, setCurrentUser, fetchAndSetUsers}) => {
                                 </div>                                 
                             </div>
                             <div className='col-12 col-md-6 d-flex align-items-center justify-content-end'>
-                                <i className="far fa-edit mx-2" onClick={() => setCurrentUser(user)}></i>
+                                <i className="far fa-edit mx-2" onClick={() => setUser(user)}></i>
                                 <i className="fas fa-trash-alt mx-2" onClick={() => deleteUserAlert(user)}></i>                             
                             </div>                            
                         </div>

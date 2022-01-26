@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 import useFormulario from '../hooks/useFormulario';
 
-const UsersForm = ({user,setCurrentUser,fetchAndSetUsers}) => {
+const UsersForm = ({user,setUser,fetchAndSetUsers}) => {
     const initialValue = {
         id: 0,
         email: "",
@@ -31,7 +31,7 @@ const UsersForm = ({user,setCurrentUser,fetchAndSetUsers}) => {
 
     const clearUserForm = () => {
         reset();
-        setCurrentUser(null);
+        setUser(null);
     };
 
     const processSuccess = () => {

@@ -20,19 +20,15 @@ const App = () => {
     setUsers([...data]);   
   };
 
-  const setCurrentUser = user => {
-    setUser(user);
-  }
-
   return (
     <div className="App">
       <div className="container-fluid">
         <div className="row">
           <div className="cool-gradient col-12 col-md-6">
-            <UsersList users={users} setCurrentUser={setCurrentUser} fetchAndSetUsers={fetchAndSetUsers} />
+            <UsersList users={users} setUser={setUser} fetchAndSetUsers={fetchAndSetUsers} />
           </div>
           <div className="col-12 col-md-6 d-flex align-items-center justify-content-center">
-            <UsersForm user={user} setCurrentUser={setCurrentUser} fetchAndSetUsers={fetchAndSetUsers} />
+            <UsersForm user={user} setUser={setUser} fetchAndSetUsers={fetchAndSetUsers} />
           </div>          
         </div>
       </div>
